@@ -464,7 +464,7 @@ $(window).on('load', function() {
     layer.bindPopup(info);
 
     // Add polygon label if needed
-    if (getPolygonSetting(currentPolygonSheet, '_polygonLabel') != '') {
+    if (getPolygonSetting(currentPolygonSheet, '_polygonLabel')) {
       var myTextLabel = L.marker(polylabel(layer.feature.geometry.coordinates, 1.0).reverse(), {
         icon: L.divIcon({
           className: 'polygon-label',
